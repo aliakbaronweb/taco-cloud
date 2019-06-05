@@ -1,17 +1,19 @@
 package tacos;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @Data
 @RequiredArgsConstructor
+@AllArgsConstructor
+@Setter
+@Getter
 public class Ingredient {
-  
+
   private final String id;
-  private final String name;
-  private final Type type;
+  private String name;
+  private Type type;
   
-  public static enum Type {
+  public enum Type {
     WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE
   }
 
